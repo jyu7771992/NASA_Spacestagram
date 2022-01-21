@@ -75,15 +75,22 @@ body{
 }
 .card .card-btn-block{
   width: 100%;
-  border-top: 1px rgba(0,0,0, 0.1);
+  display: flex;
+  height: 30px;
+  overflow: hidden;
+  border-top: 1px solid rgba(0,0,0, 0.2);
 }
 .card-btn-block > .card-btn{
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
   width: calc(100% / 3);
   height: 30px;
   text-align: center;
   border: 0px;
   background-color: white;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0.3rem 0;
 }
 .card-comment{
   display: block;
@@ -131,4 +138,13 @@ body{
   display: inline-block;
   width: 100%;
   margin: 1rem 0rem;
+}
+.card-btn.like .like-icon{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 0.3rem;
+}
+.card-btn .btn-txt{
+  line-height: 1.5;
 }

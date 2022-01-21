@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70">
+  <defs>
+    <clipPath id="clip-Like">
+      <rect width="70" height="70"/>
+    </clipPath>
+  </defs>
+  <g id="Like" clip-path="url(#clip-Like)">
+    <path id="Union_7" data-name="Union 7" d="M27.669,44.383l-.2.1v-.208c-3.254-1.693-25.009-13.5-26.3-27.283C-.234,5.005,7.345,0,14.648,0,21.16,0,26.572,4.158,27.669,10.309,28.766,4.158,34.178,0,40.69,0c7.3,0,14.882,5.005,13.479,16.995-1.287,13.778-23.043,25.59-26.3,27.283v.208Z" transform="translate(7.5 12.5)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  </g>
+</svg>

@@ -1,6 +1,7 @@
 
 import './Main.css';
 import React, {Component} from 'react';
+import Like from '../Images/Like.svg';
 
 class Main extends Component{
   constructor(){
@@ -71,7 +72,7 @@ class Main extends Component{
             <div key={index} className="card">
               <h4 className="card-title">{post_info[post].title}</h4>
               <div className="card-detail">
-                <span className="card-author">Author: {post_info[post].copyright}</span>
+                <span className="card-author">Author: {(post_info[post].copyright) || `Unknown`}</span>
                 <span className="card-date"> Date: {post_info[post].date}</span>
               </div>
               <div className="card-images">
@@ -79,9 +80,11 @@ class Main extends Component{
               </div> 
               <p className="card-explanation">{post_info[post].explanation}</p>
               <div className="card-btn-block">
-                <button className="card-btn like">Like</button>
-                <button className="card-btn comment" onClick={()=> this.isCommentOpen_One()}>Comments</button>
-                <button className="card-btn share">Share</button>
+                <button className="card-btn like">
+                  <img className="like-icon" src={Like} alt="" /><span className="btn-txt">Like</span>
+                </button>
+                <button className="card-btn comment" onClick={()=> this.isCommentOpen_One()}><span className="btn-txt">Comments</span></button>
+                <button className="card-btn share"><span className="btn-txt">Share</span></button>
               </div>
               <ul className={`card-comment ${this.state.isCommentOpen_One ? "open" : "close"}`}>
                 {
@@ -102,7 +105,7 @@ class Main extends Component{
             <div key={index} className="card">
               <h4 className="card-title">{post_info[post].title}</h4>
               <div className="card-detail">
-                <span className="card-author">Author: {post_info[post].copyright}</span>
+                <span className="card-author">Author: {(post_info[post].copyright) || `Unknown`}</span>
                 <span className="card-date"> Date: {post_info[post].date}</span>
               </div>
               <div className="card-images">
@@ -110,9 +113,11 @@ class Main extends Component{
               </div> 
               <p className="card-explanation">{post_info[post].explanation}</p>
               <div className="card-btn-block">
-                <button className="card-btn like">Like</button>
-                <button className="card-btn comment" onClick={()=> this.isCommentOpen_Two()}>Comments</button>
-                <button className="card-btn share">Share</button>
+                <button className="card-btn like">
+                  <img className="like-icon" src={Like} alt="" /><span className="btn-txt">Like</span>
+                </button>
+                <button className="card-btn comment" onClick={()=> this.isCommentOpen_Two()}><span className="btn-txt">Comments</span></button>
+                <button className="card-btn share"><span className="btn-txt">Share</span></button>
               </div>
               <ul className={`card-comment ${this.state.isCommentOpen_Two ? "open" : "close"}`}>
                 {
@@ -133,7 +138,7 @@ class Main extends Component{
             <div key={index} className="card">
               <h4 className="card-title">{post_info[post].title}</h4>
               <div className="card-detail">
-                <span className="card-author">Author: {post_info[post].copyright}</span>
+                <span className="card-author">Author: {(post_info[post].copyright) || `Unknown`}</span>
                 <span className="card-date"> Date: {post_info[post].date}</span>
               </div>
               <div className="card-images">
@@ -141,9 +146,12 @@ class Main extends Component{
               </div> 
               <p className="card-explanation">{post_info[post].explanation}</p>
               <div className="card-btn-block">
-                <button className="card-btn like">Like</button>
-                <button className="card-btn comment" onClick={()=> this.isCommentOpen_Three()}>Comments</button>
-                <button className="card-btn share">Share</button>
+                <button className="card-btn like">
+                  <img className="like-icon" src={Like} alt="" />
+                  <span className="btn-txt">Like</span>
+                </button>
+                <button className="card-btn comment" onClick={()=> this.isCommentOpen_Three()}><span className="btn-txt">Comments</span></button>
+                <button className="card-btn share"><span className="btn-txt">Share</span></button>
               </div>
               <ul className={`card-comment ${this.state.isCommentOpen_Three ? "open" : "close"}`}>
                 {
