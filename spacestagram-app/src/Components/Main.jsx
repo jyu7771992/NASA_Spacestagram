@@ -17,12 +17,17 @@ class Main extends Component{
 
   render(){
     let post_info = [this.state.posters];
+    console.log(post_info);
     return (
       <div className="Main">
         {
           post_info.map((index, post) => (
             <div key={index} className="card">
-              <h5 className="card-title">{post_info[post].title}</h5>
+              <h4 className="card-title">{post_info[post].title}</h4>
+              <span className="card-date">{post_info[post].date}</span>
+              <img src={post_info[post].hdurl} alt="" />
+              <p className="card-explanation">{post_info[post].explanation}</p>
+              <button>Like</button>
             </div>
           ))
         }

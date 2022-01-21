@@ -1,31 +1,59 @@
 .Main {
   text-align: center;
 }
-
-
-
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body{
+  background-color: rgba(0,0,0, 0.05);
+  padding-top: 2rem;
+}
+.card-title{
+  color: black;
+  margin-bottom: 0.5rem;
+}
+.card-date{
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  display: inline-block;
+  text-align: right;
+  font-size: 0.7rem;
+}
+.card-images{
+  display: block;
+  max-width: 300px;
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+.card img{
+  width: 100%;
+  height: auto;
+}
+.card{
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 1 rem;
+  border-radius: 3px;
+  box-shadow: 0px 0px 3px 3px rgba(0,0,0, 0.1);
+  background-color: white;
+  color: gray;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+.card-explanation{
+  margin: 0.5rem;
+  color: rgba(0,0,0, 0.8);
+  font-size: 0.9rem;
+  text-align: justify;
+  word-break: normal;
+  text-align-last: left;
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
