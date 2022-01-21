@@ -1,3 +1,10 @@
+*{
+  box-sizing: border-box;
+}
+ul, li{
+  list-style: none;
+  padding-left: 0px;
+}
 .Main {
   text-align: center;
 }
@@ -5,48 +12,59 @@ body{
   background-color: rgba(0,0,0, 0.05);
   padding-top: 2rem;
 }
-.card-title{
-  color: black;
-  margin-bottom: 0.5rem;
-}
-.card-date{
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 1rem;
-  display: inline-block;
-  text-align: right;
-  font-size: 0.7rem;
-}
-.card-images{
-  display: block;
-  max-width: 300px;
-  width: 300px;
-  height: auto;
-  overflow: hidden;
-  position: relative;
-}
-.card img{
-  width: 100%;
-  height: auto;
-}
 .card{
   width: 100%;
   max-width: 300px;
-  margin: 0 auto;
-  margin-top: 1 rem;
+  margin: 1rem auto;
   border-radius: 3px;
   box-shadow: 0px 0px 3px 3px rgba(0,0,0, 0.1);
   background-color: white;
   color: gray;
   padding: 0.3rem;
+  padding-bottom: 0.8rem;
   cursor: pointer;
 }
-.card-explanation{
-  margin: 0.5rem;
+.card .card-title{
+  width: 100%;
+  display: block;
+  color: black;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  text-indent: 0.5rem;
+}
+.card .card-date,.card .card-author{
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 1rem;
+  display: inline-block;
+  text-align: right;
+  font-size: 0.7rem;
+  padding: 0rem 0.5rem;
+} 
+.card .card-author{
+  text-align: left;
+  border-right: 1px rgba(0,0,0, 0.05);
+}
+.card .card-images{
+  display: block;
+  max-width: 300px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+.card .card-images img{
+  width: 100%;
+  height: auto;
+}
+
+.card .card-explanation{
+  margin: 1rem 0.5rem 0.8rem;
   color: rgba(0,0,0, 0.8);
-  font-size: 0.9rem;
-  text-align: justify;
-  word-break: normal;
+  font-size: 0.8rem;
+  text-align: left;
+  word-break: break-word;
   text-align-last: left;
   max-height: 100px;
   overflow: hidden;
@@ -55,5 +73,62 @@ body{
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-
-
+.card .card-btn-block{
+  width: 100%;
+  border-top: 1px rgba(0,0,0, 0.1);
+}
+.card-btn-block > .card-btn{
+  display: inline-block;
+  width: calc(100% / 3);
+  height: 30px;
+  text-align: center;
+  border: 0px;
+  background-color: white;
+}
+.card-comment{
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  margin-bottom: 0px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.card-comment.open{
+  max-height: 100%;
+}
+.card-comment.close{
+  max-height: 0px;
+  margin: 0px;
+}
+.card-comment > .user{
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  margin: 0.1rem 0rem;
+  border-top: 1px solid rgba(0,0,0, 0.1);
+}
+.card-comment > .user > .user-id, .card-comment > .user > .user-comment{
+  display: inline-block;
+  text-align: left;
+  font-size: 0.8rem;
+  padding: 0rem 0.5rem;
+}
+.card-comment > .user > .user-id{
+  width: 100px;
+  font-weight: 600;
+  color: #333333;
+}
+.card-comment > .user > .user-comment{
+  width: calc(100% - 100px);
+}
+.card-comment .load-btn{
+  border: 0px;
+  background-color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin: 1rem 0rem;
+}
